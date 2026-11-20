@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaMail Enterprise — Hạ tầng Email Quy mô 5.000 – 20.000 Hộp thư</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #030712;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(30, 41, 59, 0.35) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 41, 59, 0.35) 1px, transparent 1px);
+    }
+    .glow-blue {
+      box-shadow: 0 0 60px -15px rgba(59, 130, 246, 0.45);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #3b82f6;
+      border: 3px solid #ffffff;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+    }
+  </style>
+</head>
+<body class="text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-950 via-indigo-950 to-blue-950 border-b border-blue-800/40 text-xs py-2 px-4 text-center text-blue-200">
+    🚀 <span class="font-semibold text-white">Ưu đãi Q4/2026:</span> Miễn phí cấu hình DNS (SPF, DKIM, DMARC) & tặng thêm <span class="text-emerald-400 font-bold">+1.000 Email</span> cho đơn hàng từ 12.000 hộp thư.
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center font-extrabold text-white text-xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition">
+          N
+        </div>
+        <div>
+          <span class="font-extrabold text-xl tracking-tight text-white">NovaMail</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-400 block -mt-1">Enterprise</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#tinh-nang" class="hover:text-blue-400 transition">Hạ tầng & Bảo mật</a>
+        <a href="#quy-trinh" class="hover:text-blue-400 transition">Quy trình triển khai</a>
+        <a href="#bang-gia" class="hover:text-blue-400 transition">Bảng giá gói Mail</a>
+        <a href="#faq" class="hover:text-blue-400 transition">Câu hỏi thường gặp</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/novamails" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-sky-300 hover:text-white bg-sky-950/60 border border-sky-700/50 px-3.5 py-2.5 rounded-xl transition">
+          <span>✈️</span>
+          <span>@novamails</span>
+        </a>
+        <a href="#dang-ky" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition shadow-lg shadow-blue-600/25">
+          Khởi tạo ngay
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-grid pt-14 pb-20 md:pt-20 md:pb-28 border-b border-slate-800/80">
+    <!-- Ambient Light -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+      <!-- Left Content -->
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          HẠ TẦNG CLOUD EMAIL CLUSTER • QUY MÔ 5.000 – 20.000 HỘP THƯ
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight mb-6">
+          Khởi tạo <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400">5.000 – 20.000 Email</span> siêu tốc, chuẩn uy tín
+        </h1>
+
+        <p class="text-slate-400 text-lg sm:text-xl mb-8 leading-relaxed max-w-2xl">
+          Hệ thống cấp phát và quản trị tài khoản email theo tên miền riêng quy mô lớn. Tích hợp tự động <strong class="text-slate-200">SPF, DKIM, DMARC</strong> cùng dải <strong class="text-slate-200">Dedicated IP sạch</strong> đảm bảo tỷ lệ vào Inbox trên 99%.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 mb-10">
+          <a href="#dang-ky" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-7 py-4 rounded-xl transition shadow-xl shadow-blue-600/30 flex items-center gap-2">
+            <span>Đăng ký gói 5.000 – 20.000 Mail</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </a>
+          <a href="https://t.me/novamails" target="_blank" rel="noopener" class="glass-card hover:bg-slate-800/80 text-slate-200 font-semibold px-7 py-4 rounded-xl transition flex items-center gap-2">
+            <span>✈️ Nhóm hỗ trợ Telegram</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 max-w-lg">
+          <div>
+            <div class="text-2xl font-extrabold text-white">99.98%</div>
+            <div class="text-xs text-slate-400">Cam kết SLA Uptime</div>
+          </div>
+          <div>
+            <div class="text-2xl font-extrabold text-emerald-400">&lt; 45 giây</div>
+            <div class="text-xs text-slate-400">Cấp phát 5.000 Mail</div>
+          </div>
+          <div>
+            <div class="text-2xl font-extrabold text-blue-400">100% Clean</div>
+            <div class="text-xs text-slate-400">Dedicated IPv4/IPv6</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Interactive Simulator -->
+      <div class="lg:col-span-5">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 glow-blue relative">
+          <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              <span class="text-xs font-mono-code text-slate-400 ml-2">provision-cluster.sh</span>
+            </div>
+            <span class="text-[11px] font-mono-code px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              API v3.4 ONLINE
+            </span>
+          </div>
+
+          <!-- Slider Control (Max 20.000) -->
+          <div class="mb-6">
+            <div class="flex justify-between items-end mb-3">
+              <span class="text-sm text-slate-400">Quy mô hộp thư cần tạo:</span>
+              <span id="mailCountLabel" class="text-2xl font-extrabold text-blue-400 font-mono-code">5.000 Email</span>
+            </div>
+            <input type="range" id="mailSlider" min="5000" max="20000" step="1000" value="5000"
+              class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+            <div class="flex justify-between text-xs font-mono-code text-slate-500 mt-2">
+              <span>5.000</span>
+              <span>12.000</span>
+              <span>20.000</span>
+            </div>
+          </div>
+
+          <!-- Live Metrics -->
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="bg-slate-950/90 p-4 rounded-2xl border border-slate-800/90">
+              <div class="text-xs text-slate-400 mb-1">Thời gian khởi tạo</div>
+              <div id="estTime" class="text-xl font-bold text-white font-mono-code">~ 45 giây</div>
+            </div>
+            <div class="bg-slate-950/90 p-4 rounded-2xl border border-slate-800/90">
+              <div class="text-xs text-slate-400 mb-1">Tỷ lệ Inbox chuẩn</div>
+              <div class="text-xl font-bold text-emerald-400 font-mono-code">99.4%</div>
+            </div>
+          </div>
+
+          <!-- Terminal Output Box -->
+          <div class="bg-slate-950 rounded-xl p-4 border border-slate-800/90 mb-5 font-mono-code text-xs text-slate-300 space-y-1.5">
+            <div class="text-slate-500">$ novamail deploy --count <span id="cmdCount" class="text-blue-400">5000</span> --dns auto</div>
+            <div id="simLogLine1" class="text-slate-400">✓ Sẵn sàng kết nối cụm máy chủ SMTP/IMAP...</div>
+            <div id="simLogLine2" class="text-emerald-400 hidden"></div>
+          </div>
+
+          <button onclick="runSimulation()" id="simBtn"
+            class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white font-semibold py-3.5 rounded-xl border border-blue-500/40 transition duration-200 flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Chạy thử mô phỏng khởi tạo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Infrastructure Features -->
+  <section id="tinh-nang" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">Công nghệ cốt lõi</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4">Hạ tầng thiết kế tối ưu cho 5.000 – 20.000 Mail</h2>
+      <p class="text-slate-400">Loại bỏ hoàn toàn tình trạng nghẽn cổ chai, khóa tài khoản hay rơi vào thư mục Spam khi vận hành hàng chục nghìn hộp thư.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass-card p-7 rounded-2xl hover:border-blue-500/50 transition group">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-5 group-hover:scale-110 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Khởi tạo hàng loạt qua API & CSV</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Tải lên tệp danh sách hoặc gọi RESTful API để cấp phát từ 5.000 đến 20.000 tài khoản đồng thời, xuất file định dạng chuẩn sẵn sàng sử dụng.</p>
+      </div>
+
+      <div class="glass-card p-7 rounded-2xl hover:border-emerald-500/50 transition group">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5 group-hover:scale-110 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Xác thực SPF, DKIM, DMARC tự động</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Hệ thống tự động sinh bản ghi xác thực DNS và cấu hình rDNS (PTR) trên dải IP sạch chưa từng dính blacklist toàn cầu.</p>
+      </div>
+
+      <div class="glass-card p-7 rounded-2xl hover:border-purple-500/50 transition group">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Đầy đủ IMAP / POP3 / SMTP & Webmail</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Tương thích hoàn hảo với mọi phần mềm quản lý mail, CRM, Outlook, Thunderbird hoặc giao diện Webmail tốc độ cao.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step Deployment Process -->
+  <section id="quy-trinh" class="py-16 px-4 sm:px-6 border-t border-slate-800/60 bg-slate-900/30">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">Nhanh gọn & Minh bạch</span>
+        <h2 class="text-3xl font-extrabold mt-2">Quy trình bàn giao trong 3 bước</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="relative p-6 rounded-2xl bg-slate-950/70 border border-slate-800">
+          <span class="text-4xl font-extrabold text-blue-500/20 font-mono-code absolute top-4 right-6">01</span>
+          <h3 class="text-lg font-bold text-white mb-2">Chọn quy mô & Gửi yêu cầu</h3>
+          <p class="text-sm text-slate-400">Lựa chọn gói số lượng hộp thư (từ 5.000 đến 20.000 email) và điền thông tin tên miền hoặc yêu cầu cấu hình.</p>
+        </div>
+        <div class="relative p-6 rounded-2xl bg-slate-950/70 border border-slate-800">
+          <span class="text-4xl font-extrabold text-blue-500/20 font-mono-code absolute top-4 right-6">02</span>
+          <h3 class="text-lg font-bold text-white mb-2">Khởi tạo Cluster & Xác thực DNS</h3>
+          <p class="text-sm text-slate-400">Kỹ thuật viên cấp phát dải IP riêng, cấu hình bản ghi SPF/DKIM/DMARC và khởi tạo toàn bộ danh sách hộp thư tự động.</p>
+        </div>
+        <div class="relative p-6 rounded-2xl bg-slate-950/70 border border-slate-800">
+          <span class="text-4xl font-extrabold text-blue-500/20 font-mono-code absolute top-4 right-6">03</span>
+          <h3 class="text-lg font-bold text-white mb-2">Bàn giao & Bảo hành 24/7</h3>
+          <p class="text-sm text-slate-400">Nhận trang quản trị Admin Panel cùng tệp danh sách tài khoản đầy đủ, kèm cam kết hỗ trợ kỹ thuật trực tiếp 24/7.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Tiers (5.000 - 12.000 - 20.000) -->
+  <section id="bang-gia" class="py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">Chi phí tối ưu</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4">Bảng gói hạ tầng Email (5.000 – 20.000 Mail)</h2>
+      <p class="text-slate-400">Cam kết bàn giao đúng tiến độ, bảo hành sống 100% tài khoản trong suốt thời gian sử dụng.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+      <!-- Tier 1: 5.000 -->
+      <div class="glass-card p-8 rounded-3xl flex flex-col justify-between hover:border-slate-600 transition">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-xl font-bold text-white">Starter Cluster</h3>
+            <span class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-slate-300">Tiêu chuẩn</span>
+          </div>
+          <p class="text-sm text-slate-400 mb-6">Phù hợp cho doanh nghiệp vừa & hệ thống vận hành ban đầu.</p>
+          <div class="pb-6 mb-6 border-b border-slate-800">
+            <span class="text-4xl font-extrabold text-white">5.000</span>
+            <span class="text-blue-400 font-bold ml-1">Email</span>
+          </div>
+          <ul class="space-y-3.5 text-sm text-slate-300 mb-8">
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Thời gian khởi tạo ~ 45 giây</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Hỗ trợ gắn tên miền riêng không giới hạn</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Cấu hình chuẩn SPF, DKIM, DMARC</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Xuất danh sách CSV / TXT tiện lợi</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Hỗ trợ kỹ thuật qua nhóm Telegram 24/7</li>
+          </ul>
+        </div>
+        <a href="#dang-ky" onclick="selectPackage('Gói Starter - 5.000 Email')"
+          class="w-full block text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3.5 rounded-xl transition">
+          Đăng ký gói 5.000 Email
+        </a>
+      </div>
+
+      <!-- Tier 2: 12.000 (Featured) -->
+      <div class="bg-gradient-to-b from-blue-950/80 to-slate-900 border-2 border-blue-500 p-8 rounded-3xl flex flex-col justify-between relative shadow-2xl shadow-blue-900/30">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-4 py-1 rounded-full tracking-wide shadow-lg">
+          ĐƯỢC CHỌN NHIỀU NHẤT
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-xl font-bold text-white">Business Pro</h3>
+            <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300">IP Riêng</span>
+          </div>
+          <p class="text-sm text-slate-300 mb-6">Tối ưu tốc độ gửi/nhận với Dedicated IP sạch chuyên biệt.</p>
+          <div class="pb-6 mb-6 border-b border-blue-800/50">
+            <span class="text-4xl font-extrabold text-white">12.000</span>
+            <span class="text-blue-400 font-bold ml-1">Email</span>
+          </div>
+          <ul class="space-y-3.5 text-sm text-slate-200 mb-8">
+            <li class="flex items-center gap-2.5"><span class="text-blue-400">✔</span> Thời gian khởi tạo ~ 1.8 phút</li>
+            <li class="flex items-center gap-2.5"><span class="text-blue-400">✔</span> Cấp sẵn Dedicated IPv4 độ uy tín cao</li>
+            <li class="flex items-center gap-2.5"><span class="text-blue-400">✔</span> Tích hợp RESTful API tạo & xóa tự động</li>
+            <li class="flex items-center gap-2.5"><span class="text-blue-400">✔</span> Hỗ trợ đầy đủ IMAP / POP3 / SMTP</li>
+            <li class="flex items-center gap-2.5"><span class="text-blue-400">✔</span> Chuyên viên kỹ thuật hỗ trợ 1-1 riêng</li>
+          </ul>
+        </div>
+        <a href="#dang-ky" onclick="selectPackage('Gói Business - 12.000 Email')"
+          class="w-full block text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-blue-600/30">
+          Đăng ký gói 12.000 Email
+        </a>
+      </div>
+
+      <!-- Tier 3: 20.000 (Max Capacity) -->
+      <div class="glass-card p-8 rounded-3xl flex flex-col justify-between hover:border-slate-600 transition">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-xl font-bold text-white">Enterprise Max</h3>
+            <span class="text-xs px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300">Giới hạn tối đa</span>
+          </div>
+          <p class="text-sm text-slate-400 mb-6">Cụm máy chủ công suất tối đa dành cho hệ thống lớn & đối tác.</p>
+          <div class="pb-6 mb-6 border-b border-slate-800">
+            <span class="text-4xl font-extrabold text-white">20.000</span>
+            <span class="text-blue-400 font-bold ml-1">Email</span>
+          </div>
+          <ul class="space-y-3.5 text-sm text-slate-300 mb-8">
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Hạ tầng Server & dải Subnet IP riêng</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Cam kết SLA Uptime 99.99%</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Tùy chỉnh chính sách bảo mật & Webhook</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Sao lưu dữ liệu định kỳ tự động hàng ngày</li>
+            <li class="flex items-center gap-2.5"><span class="text-emerald-400">✔</span> Chiết khấu tốt nhất cho gói tối đa 20K</li>
+          </ul>
+        </div>
+        <a href="#dang-ky" onclick="selectPackage('Gói Enterprise - 20.000 Email')"
+          class="w-full block text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3.5 rounded-xl transition">
+          Đăng ký gói 20.000 Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 px-4 sm:px-6 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold">Câu hỏi thường gặp</h2>
+    </div>
+    <div class="space-y-4">
+      <details class="glass-card rounded-2xl p-5 cursor-pointer group" open>
+        <summary class="font-bold text-white flex items-center justify-between list-none">
+          <span>Thời gian bàn giao từ 5.000 đến 20.000 email mất bao lâu?</span>
+          <span class="text-blue-400 group-open:rotate-180 transition">▼</span>
+        </summary>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+          Sau khi xác nhận gói dịch vụ và thông tin tên miền, hệ thống tự động khởi tạo và bàn giao toàn bộ danh sách tài khoản chỉ trong vòng <strong>3 – 10 phút</strong> (bao gồm cả thời gian kiểm tra bản ghi DNS).
+        </p>
+      </details>
+
+      <details class="glass-card rounded-2xl p-5 cursor-pointer group">
+        <summary class="font-bold text-white flex items-center justify-between list-none">
+          <span>Tôi có thể dùng tên miền riêng của công ty không?</span>
+          <span class="text-blue-400 group-open:rotate-180 transition">▼</span>
+        </summary>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+          Hoàn toàn được. Bạn có thể gắn không giới hạn số lượng tên miền riêng hoặc sử dụng kho tên miền sẵn có của hệ thống tùy theo nhu cầu vận hành.
+        </p>
+      </details>
+
+      <details class="glass-card rounded-2xl p-5 cursor-pointer group">
+        <summary class="font-bold text-white flex items-center justify-between list-none">
+          <span>Chính sách bảo hành và hỗ trợ kỹ thuật như thế nào?</span>
+          <span class="text-blue-400 group-open:rotate-180 transition">▼</span>
+        </summary>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+          Mọi gói dịch vụ đều được bảo hành 1 đổi 1 nếu phát sinh lỗi từ hạ tầng máy chủ và có đội ngũ kỹ thuật trực hỗ trợ 24/7 trên nhóm Telegram.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Registration Form Section -->
+  <section id="dang-ky" class="py-20 px-4 sm:px-6 relative">
+    <div class="max-w-5xl mx-auto glass-card rounded-3xl overflow-hidden shadow-2xl border border-slate-700/80 grid lg:grid-cols-5">
+      
+      <!-- Left Contact Info Panel -->
+      <div class="lg:col-span-2 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 p-8 sm:p-10 text-white flex flex-col justify-between">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-xs font-semibold mb-4">
+            KÍCH HOẠT SIÊU TỐC
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mb-4">Đăng ký khởi tạo hệ thống Email</h2>
+          <p class="text-blue-100 text-sm leading-relaxed mb-8">
+            Để lại thông tin gói cước bạn quan tâm (từ 5.000 đến 20.000 hộp thư). Hệ thống sẽ chuyển trực tiếp yêu cầu tới bộ phận kỹ thuật để xử lý và bàn giao ngay.
+          </p>
+
+          <div class="space-y-4 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="text-lg">✉️</span>
+              <div>
+                <div class="text-blue-200 text-xs">Email tiếp nhận đơn hàng</div>
+                <div class="font-semibold">tangtienthu703@gmail.com</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-lg">✈️</span>
+              <div>
+                <div class="text-blue-200 text-xs">Nhóm hỗ trợ Telegram</div>
+                <a href="https://t.me/novamails" target="_blank" rel="noopener" class="font-semibold underline hover:text-blue-100">
+                  https://t.me/novamails
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-white/20 text-xs text-blue-100">
+          🔒 Cam kết bảo mật 100% thông tin khách hàng và dữ liệu tên miền.
+        </div>
+      </div>
+
+      <!-- Right Form Panel -->
+      <div class="lg:col-span-3 bg-slate-900/95 p-8 sm:p-10">
+        <!-- Iframe ẩn gửi form mượt mà -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        <form
+          id="registerForm"
+          action="https://formsubmit.co/tangtienthu703@gmail.com"
+          method="POST"
+          target="hidden_iframe"
+          onsubmit="handleFormSubmit()"
+          class="space-y-5"
+        >
+          <input type="hidden" name="_subject" value="🔥 Đơn đăng ký gói Email mới từ NovaMail!">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Họ tên / Doanh nghiệp *</label>
+              <input type="text" name="Khach_Hang" required placeholder="Nhập tên của bạn..."
+                class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email nhận bàn giao *</label>
+              <input type="email" name="Email_Khach" required placeholder="you@domain.com"
+                class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none transition">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Gói số lượng Email</label>
+            <select id="packageSelect" name="Goi_Dich_Vu"
+              class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none transition">
+              <option value="Gói Starter - 5.000 Email">Gói Starter — 5.000 Email</option>
+              <option value="Gói Business - 12.000 Email">Gói Business — 12.000 Email</option>
+              <option value="Gói Enterprise - 20.000 Email">Gói Enterprise — 20.000 Email</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Ghi chú yêu cầu kỹ thuật</label>
+            <textarea name="Ghi_Chu" rows="3" placeholder="Ví dụ: Cần xuất định dạng user|pass, sử dụng tên miền riêng..."
+              class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 outline-none transition"></textarea>
+          </div>
+
+          <div id="statusMessage" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+          <button type="submit" id="submitBtn"
+            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2">
+            <span>Gửi đăng ký kích hoạt ngay</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Telegram Group Button -->
+  <a href="https://t.me/novamails" target="_blank" rel="noopener"
+    class="fixed bottom-6 right-6 z-50 bg-sky-600 hover:bg-sky-500 text-white px-4 py-3 rounded-full shadow-2xl shadow-sky-600/50 flex items-center gap-2.5 font-semibold text-sm transition hover:scale-105">
+    <span>✈️</span>
+    <span>Nhóm Telegram</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-10 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center text-xs">N</span>
+        <span class="font-bold text-slate-300">NovaMail Enterprise</span>
+        <span>— Hạ tầng Email Quy mô 5.000 – 20.000 Hộp thư</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        <span>Liên hệ: tangtienthu703@gmail.com</span>
+        <span>•</span>
+        <a href="https://t.me/novamails" target="_blank" rel="noopener" class="text-sky-400 hover:underline">t.me/novamails</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slider = document.getElementById('mailSlider');
+    const mailCountLabel = document.getElementById('mailCountLabel');
+    const cmdCount = document.getElementById('cmdCount');
+    const estTime = document.getElementById('estTime');
+
+    slider.addEventListener('input', () => {
+      const val = Number(slider.value);
+      mailCountLabel.innerText = val.toLocaleString('vi-VN') + ' Email';
+      cmdCount.innerText = val;
+      const seconds = Math.round((val / 5000) * 45);
+      estTime.innerText = seconds < 60 ? `~ ${seconds} giây` : `~ ${(seconds / 60).toFixed(1)} phút`;
+    });
+
+    function runSimulation() {
+      const line1 = document.getElementById('simLogLine1');
+      const line2 = document.getElementById('simLogLine2');
+      const val = Number(slider.value).toLocaleString('vi-VN');
+
+      line1.className = 'text-amber-400';
+      line1.innerText = `⏳ Đang cấu hình bản ghi SPF/DKIM & cấp phát ${val} hộp thư...`;
+      line2.classList.add('hidden');
+
+      setTimeout(() => {
+        line1.className = 'text-slate-400';
+        line1.innerText = `✓ Đã xác thực DNS & IP sạch cho cụm ${val} Email.`;
+        line2.classList.remove('hidden');
+        line2.innerText = `🚀 Hoàn tất! Sẵn sàng xuất danh sách tài khoản.`;
+      }, 1100);
+    }
+
+    function selectPackage(pkgName) {
+      document.getElementById('packageSelect').value = pkgName;
+    }
+
+    function handleFormSubmit() {
+      const btn = document.getElementById('submitBtn');
+      const status = document.getElementById('statusMessage');
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳ Đang gửi thông tin đăng ký...</span>';
+
+      setTimeout(() => {
+        status.className = 'p-4 rounded-xl text-sm font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/40';
+        status.innerText = '✅ Đăng ký thành công! Yêu cầu của bạn đã được chuyển tới quản trị viên (tangtienthu703@gmail.com).';
+        status.classList.remove('hidden');
+
+        btn.disabled = false;
+        btn.innerHTML = '<span>Gửi đăng ký kích hoạt ngay</span>';
+        document.getElementById('registerForm').reset();
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
